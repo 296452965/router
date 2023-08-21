@@ -89,8 +89,8 @@ const router = createRouter({
   history: createWebHistory(),
   routes: [
     // 将匹配 /users/posva 而非：
-    // - /users/posva/ 当 strict: true
-    // - /Users/posva 当 sensitive: true
+    // - /users/posva/ 因为 strict: true
+    // - /Users/posva 因为 sensitive: true
     { path: '/users/:id', sensitive: true },
     // 将匹配 /users, /Users, 以及 /users/42 而非 /users/ 或 /users/42/
     { path: '/users/:id?' },
